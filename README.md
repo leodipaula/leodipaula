@@ -2,8 +2,8 @@
 
 ##
 
-- 📚 Atualmente estudando JavaScript
-- 🔬 Estudo Ciência e Tecnologia na UFABC
+- 📚 Dev Java
+- 🔬 Estudo Ciência e Tecnologia, e Ciência da Computação, na UFABC
 - ☕ Movido a café
 <div style="display: flex; justify-content: space-between;">
   <img src="https://github-readme-stats.vercel.app/api?username=leodipaula&show_icons=true&theme=dracula&include_all_commits=true&count_private=true&rank_icon=github" height="180" width="400">
