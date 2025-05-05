@@ -1,0 +1,167 @@
+:root {
+  --bg: #1a1a24;
+  --text: #fff;
+  --primary: #ff7ebd;
+  --border: rgba(255, 255, 255, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+  padding: 24px;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 64px;
+  width: 100%;
+}
+
+header h1 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 16px;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+nav a:hover {
+  opacity: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 16px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.profile {
+  grid-column: span 2;
+  grid-row: 1;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.profile h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.profile p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.blog {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Ajustes para os cards de ícones */
+.contact,
+.spotify,
+.email {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.contact svg,
+.spotify svg,
+.email svg {
+  width: 64px;
+  height: 64px;
+}
+
+/* Cores específicas para os cards de contato */
+.contact,
+.email {
+  background: var(--primary);
+}
+
+.contact svg,
+.email svg {
+  color: var(--text);
+}
+
+.spotify {
+  background: #1DB954;
+}
+
+.spotify svg {
+  color: var(--text);
+}
+
+button {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.bottom-cards {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 16px;
+}
+
+.study {
+  font-size: 14px;
+}
