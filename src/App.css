@@ -70,15 +70,35 @@ nav a:hover {
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
+
 
 .profile {
   grid-column: span 2;
   grid-row: 1;
   display: flex;
-  gap: 24px;
+  justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+.profile-content {
+  flex: 1;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 24px;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .profile h2 {
@@ -98,7 +118,20 @@ nav a:hover {
   grid-row: 1 / span 2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+  padding: 32px;
+  padding-bottom: 120px;
+}
+
+.blog-image {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: auto;
 }
 
 /* Ajustes para os cards de ícones */
@@ -114,9 +147,9 @@ nav a:hover {
 
 .contact svg,
 .spotify svg,
-.email svg {
-  width: 64px;
-  height: 64px;
+.email-front svg {
+  width: 128px;
+  height: 128px;
 }
 
 /* Cores específicas para os cards de contato */
@@ -132,6 +165,7 @@ nav a:hover {
 
 .spotify {
   background: #1DB954;
+  position: relative;
 }
 
 .spotify svg {
@@ -164,4 +198,102 @@ button {
 
 .study {
   font-size: 14px;
+}
+
+.study {
+  position: relative;
+  overflow: hidden;
+  padding: 32px;
+  padding-right: 120px;
+}
+
+.study-image {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: auto;
+  opacity: 0.7;
+}
+
+.contact {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.external-link {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  width: 20px !important;
+  height: 20px !important;
+  opacity: 0.7;
+}
+
+.email-container {
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.email {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.email-front,
+.email-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.email-back-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.email-back {
+  transform: rotateY(180deg);
+  flex-direction: column;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.check-icon {
+  color: var(--text);
+  width: 48px;
+  height: 48px;
+}
+
+.email-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card.email.flipped .email-inner {
+  transform: rotateY(180deg);
 }
