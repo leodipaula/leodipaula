@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react'
 import { FaGithub, FaLinkedinIn, FaSun, FaMoon, FaSpotify, FaEnvelope, FaExternalLinkAlt, FaCheck } from 'react-icons/fa'
 import './App.css'
+import profileImage from './assets/Leonardo.jpg'
+import blogImage from './assets/anya ponteiro (1).png'
+import ufabcImage from './assets/Ufabc_logo.png'
 
 function ThemeToggle() {
   const [darkMode, setDarkMode] = useState(false)
@@ -44,7 +47,7 @@ export default function App() {
             <p>a web com <span className="highlight">Java </span> e <span className="highlight">React</span>.</p>
           </div>
           <div className="profile-image">
-            <img src="src\assets\Leonardo.jpg" alt="" />
+            <img src={profileImage} alt="" />
           </div>
         </div>
 
@@ -63,7 +66,7 @@ export default function App() {
           <p>minhas experiências, reflexões</p>
           <p>e artigos técnicos</p>
           <p><a href="#blog" className="highlight">aqui no blog </a> (em breve).</p>
-          <img src="src\assets\anya ponteiro (1).png" alt="" className="blog-image" />
+          <img src={blogImage} alt="" className="blog-image" />
         </div>
 
         <div className="bottom-cards">
@@ -72,7 +75,7 @@ export default function App() {
             <p>Ciência e Tecnologia,</p>
             <p>e Ciência da Computação</p>
             <p>na <span className="highlight">UFABC</span></p>
-            <img src="src\assets\Ufabc_logo.png" alt="" className="study-image" />
+            <img src={ufabcImage} alt="" className="study-image" />
           </div>
 
           <a href="https://open.spotify.com/playlist/4XaLe5Slm4UVW2yWPQlLzC?si=da95d0c4322443dd" className="card spotify" target="_blank" rel="noopener">
