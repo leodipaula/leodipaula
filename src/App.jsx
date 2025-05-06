@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import { FaGithub, FaLinkedinIn, FaSun, FaMoon, FaSpotify, FaEnvelope, FaExternalLinkAlt, FaCheck } from 'react-icons/fa'
 import './App.css'
-import profileImage from './assets/Leonardo.jpg'
-import blogImage from './assets/anya ponteiro (1).png'
-import ufabcImage from './assets/Ufabc_logo.png'
+const profileImage = new URL('./assets/Leonardo.jpg', import.meta.url).href
+const blogImage = new URL('./assets/anya ponteiro (1).png', import.meta.url).href
+const ufabcImage = new URL('./assets/Ufabc_logo.png', import.meta.url).href
 
 function ThemeToggle() {
   const [darkMode, setDarkMode] = useState(false)
