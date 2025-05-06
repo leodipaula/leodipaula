@@ -28,7 +28,7 @@ export default function App() {
   return (
     <div className="container">
       <header>
-        <h1>Olá, tudo bem?</h1>
+        <a href="#" className="highlight">Olá, tudo bem?</a>
         <nav>
           <a href="#blog">blog</a>
           <a href="#carreira">carreira</a>
@@ -41,7 +41,7 @@ export default function App() {
           <div>
             <h2>Sou o Leonardo!</h2>
             <p>e crio aplicações para</p>
-            <p>a web com Java e React.</p>
+            <p>a web com <span className="highlight">Java </span> e <span className="highlight">React</span>.</p>
           </div>
           <div className="profile-image">
             <img src="src\assets\Leonardo.jpg" alt="" />
@@ -59,10 +59,10 @@ export default function App() {
         </a>
 
         <div className="card blog">
-          <p>Escrevendo sobre</p>
-          <p>minhas experiências e reflexões</p>
-          <p>técnicas ou do mundo da tecnologia</p>
-          <p>aqui no blog.</p>
+          <p>Leia sobre</p>
+          <p>minhas experiências, reflexões</p>
+          <p>e artigos técnicos</p>
+          <p><a href="#blog" className="highlight">aqui no blog </a> (em breve).</p>
           <img src="src\assets\anya ponteiro (1).png" alt="" className="blog-image" />
         </div>
 
@@ -71,7 +71,7 @@ export default function App() {
             <p>Estudante de</p>
             <p>Ciência e Tecnologia,</p>
             <p>e Ciência da Computação</p>
-            <p>na UFABC</p>
+            <p>na <span className="highlight">UFABC</span></p>
             <img src="src\assets\Ufabc_logo.png" alt="" className="study-image" />
           </div>
 
