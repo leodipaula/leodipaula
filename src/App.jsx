@@ -26,7 +26,7 @@ export default function App() {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const copyEmail = async () => {
-    await navigator.clipboard.writeText('leofernandes9@email.com');
+    await navigator.clipboard.writeText('leofernandes9@gmail.com');
     setIsFlipped(true);
     setTimeout(() => setIsFlipped(false), 2000);
   };
