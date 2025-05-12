@@ -3,11 +3,22 @@
 :root {
   --bg: #1a1a24;
   --text: #fff;
-  --primary: #ff7ebd;
+  --primary: #833c5e;
   --border: rgba(255, 255, 255, 0.1);
   --card-bg: rgba(255, 255, 255, 0.05);
   --pastel-orange: #e3beb1;
   --text-gray: rgba(255, 255, 255, 0.85);
+}
+
+:root[data-theme="light"] {
+  --bg: #e3beb1;
+  --text: #2d2d2d;
+  --primary: #8B4513;
+  --border: rgba(0, 0, 0, 0.1);
+  --card-bg: #fff5f2;
+  --pastel-orange: #cc6b5c;
+  --text-gray: #4a4a4a;
+  --pastel-red: #fa4949;
 }
 
 body {
@@ -158,6 +169,18 @@ a.highlight {
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
   text-decoration-color: var(--pastel-orange);
+}
+
+/* Configuração específica para o tema claro */
+:root[data-theme="light"] .highlight {
+  color: var(--pastel-red);
+  text-decoration-color: var(--pastel-red);
+}
+
+/* Garante que os links highlight também sigam o mesmo padrão */
+:root[data-theme="light"] a.highlight {
+  color: var(--pastel-red);
+  text-decoration-color: var(--pastel-red);
 }
 
 a.highlight:hover {
@@ -335,6 +358,10 @@ button {
   justify-content: center;
 }
 
+/* Ajuste para o email copiado no tema claro */
+:root[data-theme="light"] .email-back-content {
+  color: #fff;
+}
 
 .email-back {
   transform: rotateY(180deg);
@@ -359,6 +386,30 @@ button {
 
 .card.email.flipped .email-inner {
   transform: rotateY(180deg);
+}
+
+/* Ajuste para melhor visibilidade dos ícones no tema claro */
+:root[data-theme="light"] .contact svg,
+:root[data-theme="light"] .email svg {
+  color: #fff;
+}
+
+:root[data-theme="light"] .external-link {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Ajuste para o email copiado no tema claro */
+:root[data-theme="light"] .check-icon {
+  color: #fff;
+}
+
+/* Suavizar transição entre temas */
+body {
+  transition: background-color 0.3s ease;
+}
+
+.card {
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 @media (max-width: 768px) {

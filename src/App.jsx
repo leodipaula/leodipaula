@@ -6,10 +6,13 @@ const blogImage = new URL('./assets/anya ponteiro (1).png', import.meta.url).hre
 const ufabcImage = new URL('./assets/Ufabc_logo.png', import.meta.url).href
 
 function ThemeToggle() {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(true)
 
   useEffect(() => {
-    document.body.classList.toggle('dark', darkMode)
+    document.documentElement.setAttribute(
+      'data-theme',
+      darkMode ? 'dark' : 'light'
+    )
   }, [darkMode])
 
   return (
