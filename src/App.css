@@ -171,13 +171,11 @@ a.highlight {
   text-decoration-color: var(--pastel-orange);
 }
 
-/* Configuração específica para o tema claro */
 :root[data-theme="light"] .highlight {
   color: var(--pastel-red);
   text-decoration-color: var(--pastel-red);
 }
 
-/* Garante que os links highlight também sigam o mesmo padrão */
 :root[data-theme="light"] a.highlight {
   color: var(--pastel-red);
   text-decoration-color: var(--pastel-red);
@@ -358,7 +356,6 @@ button {
   justify-content: center;
 }
 
-/* Ajuste para o email copiado no tema claro */
 :root[data-theme="light"] .email-back-content {
   color: #fff;
 }
@@ -388,7 +385,6 @@ button {
   transform: rotateY(180deg);
 }
 
-/* Ajuste para melhor visibilidade dos ícones no tema claro */
 :root[data-theme="light"] .contact svg,
 :root[data-theme="light"] .email svg {
   color: #fff;
@@ -398,12 +394,10 @@ button {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* Ajuste para o email copiado no tema claro */
 :root[data-theme="light"] .check-icon {
   color: #fff;
 }
 
-/* Suavizar transição entre temas */
 body {
   transition: background-color 0.3s ease;
 }
@@ -426,6 +420,17 @@ body {
   .profile {
     grid-column: 1;
     grid-row: 1;
+    padding-top: 16px;
+  }
+
+  .profile h2 {
+    margin-bottom: 8px;
+    font-size: 32px;
+  }
+
+  .profile p {
+    margin-bottom: 16px;
+    font-size: 16px;
   }
 
   .contact {
@@ -435,6 +440,10 @@ body {
   .blog {
     grid-column: 1;
     grid-row: auto;
+  }
+
+  .blog p {
+    margin-bottom: 4px;
   }
 
   .bottom-cards {
@@ -481,6 +490,7 @@ body {
 
   .study-image {
     width: 130px;
+    height: 130px;
   }
 
   .email-container {
@@ -502,6 +512,8 @@ body {
   }
 
   .blog-image {
-    padding-left: 220px;
+    width: 200px;
+    padding-left: 180px;
+    bottom: -20px;
   }
 }
