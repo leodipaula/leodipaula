@@ -410,6 +410,9 @@ body {
 
   body {
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   * {
@@ -417,9 +420,8 @@ body {
   }
 
   .container {
-    padding: 16px;
-    max-width: 100%;
-    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .grid {
@@ -530,6 +532,7 @@ body {
     bottom: 0;
     right: 0;
     width: 200px;
+    height: auto;
     max-width: 40%;
     transform: translate(20%, 20%);
     z-index: 0;
