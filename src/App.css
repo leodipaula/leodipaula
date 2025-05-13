@@ -541,4 +541,14 @@ body {
     position: relative;
     z-index: 1;
   }
+
+  .profile,
+  .contact,
+  .blog,
+  .study,
+  .spotify {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
 }
